@@ -1,0 +1,2 @@
+Train: loss=0.4194, accuracy=0.8379
+Val: loss=0.3611, accuracy=0.8607

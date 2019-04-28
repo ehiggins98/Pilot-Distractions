@@ -15,7 +15,7 @@ def feature_importances(model):
 
 batch_size = 32
 
-model = get_model(25, batch_size)
+model = get_model(25, batch_size, [32, 32, 16])
 model.fit(
     x=input.get_dataset('train.tfrecord', batch_size, input.get_features(), input.get_extrema()),
     epochs=1,
@@ -50,7 +50,7 @@ for n_features in range(1, 25):
     avg_loss = 0
 
     for i in range(3):
-        model = get_model(n_features, batch_size)
+        model = get_model(n_features, batch_size, [32, 32, 16])
         model.fit(
             x=input.get_dataset('train.tfrecord', batch_size, features, extrema),
             epochs=1,
