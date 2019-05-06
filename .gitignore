@@ -1,4 +1,3 @@
 *.json
 *.csv
-*.tfrecord
 __pycache__/
